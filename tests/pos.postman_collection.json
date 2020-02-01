@@ -1,0 +1,1812 @@
+{
+	"info": {
+		"_postman_id": "5ba97c11-0ea2-4fa1-9423-1187fb1e5c44",
+		"name": "pos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cities",
+			"item": [
+				{
+					"name": "Get Cities",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/cities",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cities"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": []
+		},
+		{
+			"name": "merchants",
+			"item": [
+				{
+					"name": "Create Merchant",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"value": "{{access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "token-type",
+								"value": "{{token-type}}",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "{{client}}",
+								"type": "text"
+							},
+							{
+								"key": "expiry",
+								"value": "{{expiry}}",
+								"type": "text"
+							},
+							{
+								"key": "uid",
+								"value": "{{uid}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Dely\",\n\t\"nit\": \"32131231\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/merchants",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Merchant",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Dely\",\n\t\"nit\": \"32131231\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/merchants/7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchants",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Merchants",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"value": "{{access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "token-type",
+								"value": "{{token-type}}",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "{{client}}",
+								"type": "text"
+							},
+							{
+								"key": "expiry",
+								"value": "{{expiry}}",
+								"type": "text"
+							},
+							{
+								"key": "uid",
+								"value": "{{uid}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/merchants",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Merchant",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/merchants/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchants",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": []
+		},
+		{
+			"name": "venues",
+			"item": [
+				{
+					"name": "Create Venue",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"value": "{{access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "token-type",
+								"value": "{{token-type}}",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "{{client}}",
+								"type": "text"
+							},
+							{
+								"key": "expiry",
+								"value": "{{expiry}}",
+								"type": "text"
+							},
+							{
+								"key": "uid",
+								"value": "{{uid}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Dely Fusa\",\n\t\"location\": \"address 1\",\n\t\"city_id\": 1,\n\t\"merchant_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/venues",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"venues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Venues",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"value": "{{access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "token-type",
+								"value": "{{token-type}}",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "{{client}}",
+								"type": "text"
+							},
+							{
+								"key": "expiry",
+								"value": "{{expiry}}",
+								"type": "text"
+							},
+							{
+								"key": "uid",
+								"value": "{{uid}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/venues?merchant_id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"venues"
+							],
+							"query": [
+								{
+									"key": "merchant_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": []
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"value": "{{access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "token-type",
+								"value": "{{token-type}}",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "{{client}}",
+								"type": "text"
+							},
+							{
+								"key": "expiry",
+								"value": "{{expiry}}",
+								"type": "text"
+							},
+							{
+								"key": "uid",
+								"value": "{{uid}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Platos Fuertes\",\n\t\"merchant_id\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/pcategories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pcategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/pcategories?merchant_id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pcategories"
+							],
+							"query": [
+								{
+									"key": "merchant_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": []
+		},
+		{
+			"name": "employees",
+			"item": [
+				{
+					"name": "Validate PIN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"pin\": \"1234\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/venues/1/employees/validate_pin",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"venues",
+								"1",
+								"employees",
+								"validate_pin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Employee",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"employee\": {\n\t\t\"email\": \"sebaspachon94@gmail.com\",\n\t\t\"pin\": \"1234\",\n\t\t\"venue_id\": 1,\n\t\t\"role_ids\": [5]\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/venues/1/employees",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"venues",
+								"1",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Employees",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/venues/1/employees",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"venues",
+								"1",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Modules",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/venues/1/employees/modules",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"venues",
+								"1",
+								"employees",
+								"modules"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": []
+		},
+		{
+			"name": "roles",
+			"item": [
+				{
+					"name": "Create Role",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"role\": {\n\t\t\"name\": \"Cajero\",\n\t\t\"permission_ids\": [1]\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/venues/1/roles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"venues",
+								"1",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Roles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/venues/1/roles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"venues",
+								"1",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Permissions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/permissions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": []
+		},
+		{
+			"name": "extras",
+			"item": [
+				{
+					"name": "Create Extra",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"value": "{{access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "token-type",
+								"value": "{{token-type}}",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "{{client}}",
+								"type": "text"
+							},
+							{
+								"key": "expiry",
+								"value": "{{expiry}}",
+								"type": "text"
+							},
+							{
+								"key": "uid",
+								"value": "{{uid}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"extra\": {\n\t\t\"name\": \"Arequipe\",\n\t\t\"merchant_id\": 1,\n\t\t\"price\": 400\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/extras",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"extras"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Extras",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/extras?merchant_id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"extras"
+							],
+							"query": [
+								{
+									"key": "merchant_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": []
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"value": "{{access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "token-type",
+								"value": "{{token-type}}",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "{{client}}",
+								"type": "text"
+							},
+							{
+								"key": "expiry",
+								"value": "{{expiry}}",
+								"type": "text"
+							},
+							{
+								"key": "uid",
+								"value": "{{uid}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product[image]",
+									"type": "file",
+									"src": "/C:/Users/pacho/Desktop/ensalada-rusa-537234.jpg"
+								},
+								{
+									"key": "product[name]",
+									"value": "Ensalada Rusa",
+									"type": "text"
+								},
+								{
+									"key": "product[description]",
+									"value": "La ensalada rusa es una ensalada de papas con verduras y mayonesa.",
+									"type": "text"
+								},
+								{
+									"key": "product[pcategory_id]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "product[price]",
+									"value": "2000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product[image]",
+									"type": "file",
+									"src": "/C:/Users/pacho/Desktop/Ensalada_César-web-553x458.jpg",
+									"disabled": true
+								},
+								{
+									"key": "product[name]",
+									"value": "Ensalada Rusa",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "product[description]",
+									"value": "La ensalada rusa es una ensalada de papas con verduras y mayonesa.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "product[pcategory_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "product[price]",
+									"value": "1500",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "product[extra_ids][]",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/products/14",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/products?pcategory_id=2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products"
+							],
+							"query": [
+								{
+									"key": "pcategory_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/products/2?pcategory_id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"2"
+							],
+							"query": [
+								{
+									"key": "pcategory_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": []
+		},
+		{
+			"name": "ingredients",
+			"item": [
+				{
+					"name": "Create Ingredients",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"product_id\": 14,\n\t\"name\": \"Relleno\",\n\t\"min\": 1,\n\t\"max\": 1,\n\t\"ingredients_attributes\": [\n\t\t{\n\t\t\t\"name\": \"Arequipe\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"Nutella\"\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ingredient_groups",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ingredient_groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ingredients",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ingredient_groups?product_id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ingredient_groups"
+							],
+							"query": [
+								{
+									"key": "product_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Ingredients",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ingredient_groups/1?product_id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ingredient_groups",
+								"1"
+							],
+							"query": [
+								{
+									"key": "product_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": []
+		},
+		{
+			"name": "Sign In",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1ab229f3-ceb5-492c-81c5-e971634bdc83",
+						"exec": [
+							"// Estatus de la API\r",
+							"pm.test(\"Status code is 200\", function (){\r",
+							"   pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// La respuesta debe ser un Json\r",
+							"pm.test(\"Response should be JSON\", function (){\r",
+							"   pm.response.to.be.json;   \r",
+							"});\r",
+							"\r",
+							"\r",
+							"//Validar el tipo de contenido del contenido devuelto.\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//Buscar Coincidencia en el cuerpo\r",
+							"tests[\"Body matches string\"] = responseBody.has(\"sebaspachon94@gmail.com\");\r",
+							"\r",
+							"\r",
+							"//Solicitud Headers\r",
+							"console.log(request);\r",
+							"console.log('request.method '+ request.method);\r",
+							"\r",
+							"var hostName = request.headers['host'];\r",
+							"console.log(hostName);\r",
+							"\r",
+							"//Respuesta Headers\r",
+							"console.log(responseHeaders)\r",
+							"console.log(responseTime);\r",
+							"console.log(responseBody);\r",
+							"console.log(responseCode);\r",
+							"\r",
+							"console.log(typeof responseHeaders);\r",
+							"console.log(typeof responseTime);\r",
+							"console.log(typeof responseBody);\r",
+							"console.log(typeof responseCode);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"sebaspachon94@gmail.com\",\n\t\"password\": \"A123123a\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/admin_auth/sign_in",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"admin_auth",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"sebaspachon94@gmail.com\",\n\t\"password\": \"A123123a\",\n\t\"password_confirmation\": \"A123123a\",\n\t\"name\": \"Sebastian Pachon\",\n\t\"fiscal_number\": \"10012313\",\n\t\"phone\": \"321123123\",\n\t\"address\": \"calle 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/admin_auth",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"admin_auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtain Menu",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "{{access-token}}",
+						"type": "text"
+					},
+					{
+						"key": "token-type",
+						"value": "{{token-type}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{client}}",
+						"type": "text"
+					},
+					{
+						"key": "expiry",
+						"value": "{{expiry}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{uid}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/menu?venue_id=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"menu"
+					],
+					"query": [
+						{
+							"key": "venue_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": []
+}

@@ -1,0 +1,26 @@
+{
+  "name": "PostMan",
+  "version": "1.0.0",
+  "description": "Project for storing Postman tests",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "api-test-Flike": "newman run tests/pos.postman_collection.json"
+  },
+  "author": "Juan Roa",
+  "dependencies": {
+    "newman": "^4.5.7"
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juan12521/PostMan.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juan12521/PostMan/issues"
+  },
+  "homepage": "https://github.com/juan12521/PostMan#readme"
+}
