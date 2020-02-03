@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "5ba97c11-0ea2-4fa1-9423-1187fb1e5c44",
+		"_postman_id": "5a7c6d4a-ed30-4155-9d58-fef7e2fb0677",
 		"name": "pos",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -67,7 +67,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "merchants",
@@ -111,12 +111,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Dely\",\n\t\"nit\": \"32131231\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n\t\"name\": \"Dely\",\n\t\"nit\": \"32131231\"\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/api/v1/merchants",
@@ -230,12 +225,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": ""
 						},
 						"url": {
 							"raw": "{{base_url}}/api/v1/merchants",
@@ -293,12 +283,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": ""
 						},
 						"url": {
 							"raw": "{{base_url}}/api/v1/merchants/1",
@@ -316,7 +301,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "venues",
@@ -360,12 +345,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Dely Fusa\",\n\t\"location\": \"address 1\",\n\t\"city_id\": 1,\n\t\"merchant_id\": 1\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n\t\"name\": \"Dely Fusa\",\n\t\"location\": \"address 1\",\n\t\"city_id\": 1,\n\t\"merchant_id\": 1\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/api/v1/venues",
@@ -423,12 +403,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": ""
 						},
 						"url": {
 							"raw": "{{base_url}}/api/v1/venues?merchant_id=1",
@@ -451,7 +426,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "categories",
@@ -576,7 +551,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "employees",
@@ -818,7 +793,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "roles",
@@ -999,7 +974,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "extras",
@@ -1124,7 +1099,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "products",
@@ -1428,7 +1403,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "ingredients",
@@ -1615,7 +1590,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Sign In",
@@ -1623,47 +1598,59 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "1ab229f3-ceb5-492c-81c5-e971634bdc83",
+						"id": "16b3f4b2-6f0a-4b58-b6e4-1f14b303809f",
 						"exec": [
-							"// Estatus de la API\r",
-							"pm.test(\"Status code is 200\", function (){\r",
-							"   pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"\r",
-							"// La respuesta debe ser un Json\r",
-							"pm.test(\"Response should be JSON\", function (){\r",
-							"   pm.response.to.be.json;   \r",
-							"});\r",
-							"\r",
-							"\r",
-							"//Validar el tipo de contenido del contenido devuelto.\r",
-							"pm.test(\"Content-Type is present\", function () {\r",
-							"    pm.response.to.have.header(\"Content-Type\");\r",
-							"});\r",
-							"\r",
-							"\r",
-							"//Buscar Coincidencia en el cuerpo\r",
-							"tests[\"Body matches string\"] = responseBody.has(\"sebaspachon94@gmail.com\");\r",
-							"\r",
-							"\r",
-							"//Solicitud Headers\r",
-							"console.log(request);\r",
-							"console.log('request.method '+ request.method);\r",
-							"\r",
-							"var hostName = request.headers['host'];\r",
-							"console.log(hostName);\r",
-							"\r",
-							"//Respuesta Headers\r",
-							"console.log(responseHeaders)\r",
-							"console.log(responseTime);\r",
-							"console.log(responseBody);\r",
-							"console.log(responseCode);\r",
-							"\r",
-							"console.log(typeof responseHeaders);\r",
-							"console.log(typeof responseTime);\r",
-							"console.log(typeof responseBody);\r",
-							"console.log(typeof responseCode);"
+							"",
+							"// Estatus de la API",
+							"pm.test(\"Status code is 200\", function (){",
+							"   pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"// La respuesta debe ser un Json",
+							"pm.test(\"Response should be JSON\", function (){",
+							"   pm.response.to.be.json;   ",
+							"});",
+							"",
+							"",
+							"//Validar el tipo de contenido del contenido devuelto.",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"",
+							"//Buscar Coincidencia en el cuerpo",
+							"tests[\"Body matches string\"] = responseBody.has(\"sebaspachon94@gmail.com\");",
+							"",
+							"",
+							"//Solicitud Headers",
+							"console.log(request);",
+							"console.log('request.method '+ request.method);",
+							"",
+							"var hostName = request.headers['host'];",
+							"console.log(hostName);",
+							"",
+							"//Respuesta Headers",
+							"console.log(responseHeaders)",
+							"console.log(responseTime);",
+							"console.log(responseBody);",
+							"console.log(responseCode);",
+							"",
+							"console.log(typeof responseHeaders);",
+							"console.log(typeof responseTime);",
+							"console.log(typeof responseBody);",
+							"console.log(typeof responseCode);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8ba01e31-d769-4010-9483-90c160a151f5",
+						"exec": [
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -1681,12 +1668,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"email\": \"sebaspachon94@gmail.com\",\n\t\"password\": \"A123123a\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\n\t\"email\": \"sebaspachon94@gmail.com\",\n\t\"password\": \"A123123a\"\n}"
 				},
 				"url": {
 					"raw": "{{base_url}}/api/v1/admin_auth/sign_in",
@@ -1717,12 +1699,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"email\": \"sebaspachon94@gmail.com\",\n\t\"password\": \"A123123a\",\n\t\"password_confirmation\": \"A123123a\",\n\t\"name\": \"Sebastian Pachon\",\n\t\"fiscal_number\": \"10012313\",\n\t\"phone\": \"321123123\",\n\t\"address\": \"calle 1\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\n\t\"email\": \"sebaspachon94@gmail.com\",\n\t\"password\": \"A123123a\",\n\t\"password_confirmation\": \"A123123a\",\n\t\"name\": \"Sebastian Pachon\",\n\t\"fiscal_number\": \"10012313\",\n\t\"phone\": \"321123123\",\n\t\"address\": \"calle 1\"\n}"
 				},
 				"url": {
 					"raw": "{{base_url}}/api/v1/admin_auth",
@@ -1740,6 +1717,52 @@
 		},
 		{
 			"name": "Obtain Menu",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b441e70d-37db-45e1-8e43-f543f6b0d8d4",
+						"exec": [
+							"// Estatus de la API\r",
+							"pm.test(\"Status code is 200\", function (){\r",
+							"   pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// La respuesta debe ser un Json\r",
+							"pm.test(\"Response should be JSON\", function (){\r",
+							"   pm.response.to.be.json;   \r",
+							"});\r",
+							"\r",
+							"\r",
+							"//Validar el tipo de contenido del contenido devuelto.\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//Solicitud Headers\r",
+							"console.log(request);\r",
+							"console.log('request.method '+ request.method);\r",
+							"\r",
+							"var hostName = request.headers['host'];\r",
+							"console.log(hostName);\r",
+							"\r",
+							"//Respuesta Headers\r",
+							"console.log(responseHeaders)\r",
+							"console.log(responseTime);\r",
+							"console.log(responseBody);\r",
+							"console.log(responseCode);\r",
+							"\r",
+							"console.log(typeof responseHeaders);\r",
+							"console.log(typeof responseTime);\r",
+							"console.log(typeof responseBody);\r",
+							"console.log(typeof responseCode);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1780,12 +1803,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": ""
 				},
 				"url": {
 					"raw": "{{base_url}}/api/v1/menu?venue_id=1",
@@ -1808,5 +1826,5 @@
 			"response": []
 		}
 	],
-	"protocolProfileBehavior": []
+	"protocolProfileBehavior": {}
 }
