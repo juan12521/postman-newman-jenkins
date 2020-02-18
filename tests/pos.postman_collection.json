@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "a60444ba-1f4a-4a4b-af33-aa4157f5f11d",
-		"name": "pos",
+		"_postman_id": "ebdd724e-8b32-4909-923e-d322e375d825",
+		"name": "POS API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -67,7 +67,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "merchants",
@@ -111,12 +111,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Dely\",\n\t\"nit\": \"32131231\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n\t\"name\": \"Dely\",\n\t\"nit\": \"32131231\"\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/api/v1/merchants",
@@ -127,6 +122,78 @@
 								"api",
 								"v1",
 								"merchants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Merchant",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "merchant[name]",
+									"value": "Dely",
+									"type": "text"
+								},
+								{
+									"key": "merchant[nit]",
+									"value": "32131231",
+									"type": "text"
+								},
+								{
+									"key": "merchant[image]",
+									"type": "file",
+									"src": "/D:/Trabajos/ICE/Domicilios/Diseños/logo_dely.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/merchants/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchants",
+								"1"
 							]
 						}
 					},
@@ -230,12 +297,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": ""
 						},
 						"url": {
 							"raw": "{{base_url}}/api/v1/merchants",
@@ -293,12 +355,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": ""
 						},
 						"url": {
 							"raw": "{{base_url}}/api/v1/merchants/1",
@@ -316,7 +373,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "venues",
@@ -360,12 +417,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Dely Fusa\",\n\t\"location\": \"address 1\",\n\t\"city_id\": 1,\n\t\"merchant_id\": 1\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n\t\"name\": \"Dely Fusa\",\n\t\"location\": \"address 1\",\n\t\"city_id\": 1,\n\t\"merchant_id\": 1\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/api/v1/venues",
@@ -423,12 +475,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": ""
 						},
 						"url": {
 							"raw": "{{base_url}}/api/v1/venues?merchant_id=1",
@@ -449,9 +496,71 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Delete Venue",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/venues/3?merchant_id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"venues",
+								"3"
+							],
+							"query": [
+								{
+									"key": "merchant_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "categories",
@@ -574,9 +683,71 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/pcategories/54?merchant_id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pcategories",
+								"54"
+							],
+							"query": [
+								{
+									"key": "merchant_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "employees",
@@ -678,7 +849,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"employee\": {\n\t\t\"email\": \"sebaspachon94@gmail.com\",\n\t\t\"pin\": \"1234\",\n\t\t\"venue_id\": 1,\n\t\t\"role_ids\": [5]\n\t}\n}"
+							"raw": "{\n\t\"employee\": {\n\t\t\"email\": \"sebaspachon94@gmail.com\",\n\t\t\"pin\": \"12345\",\n\t\t\"role_ids\": [5]\n\t}\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/api/v1/venues/1/employees",
@@ -757,6 +928,64 @@
 					"response": []
 				},
 				{
+					"name": "Delete Employee",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/venues/1/employees/41",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"venues",
+								"1",
+								"employees",
+								"41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get Modules",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -818,7 +1047,130 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "tables",
+			"item": [
+				{
+					"name": "Create Table",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"table\": {\n\t\t\"name\": \"Mesa 5\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/venues/1/tables",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"venues",
+								"1",
+								"tables"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tables",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/venues/1/tables",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"venues",
+								"1",
+								"tables"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "roles",
@@ -941,6 +1293,64 @@
 					"response": []
 				},
 				{
+					"name": "Delete Role",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/venues/1/roles/8",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"venues",
+								"1",
+								"roles",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get Permissions",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -999,7 +1409,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "extras",
@@ -1124,7 +1534,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "products",
@@ -1428,7 +1838,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "ingredients",
@@ -1472,7 +1882,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"product_id\": 14,\n\t\"name\": \"Relleno\",\n\t\"min\": 1,\n\t\"max\": 1,\n\t\"ingredients_attributes\": [\n\t\t{\n\t\t\t\"name\": \"Arequipe\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"Nutella\"\n\t\t}\n\t]\n}"
+							"raw": "{\n\t\"product_id\": 14,\n\t\"name\": \"Segundo Relleno\",\n\t\"min\": 0,\n\t\"max\": 1,\n\t\"ingredients_attributes\": [\n\t\t{\n\t\t\t\"name\": \"Arequipe\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"Nutella\"\n\t\t}\n\t]\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/api/v1/ingredient_groups",
@@ -1615,7 +2025,250 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "Create New Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"comment\": \"Comentario de pedido\",\n\t\"payment_type\": 1,\n\t\"table_id\": 4,\n\t\"items\": [\n\t\t{\n\t\t\t\"id\": 14,\n\t\t\t\"amount\": 1,\n\t\t\t\"ingredients\": [\n\t\t\t\t1, 7\n\t\t\t],\n\t\t\t\"extras\": [\n\t\t\t\t1\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\t\"id\": 11,\n\t\t\t\"amount\": 3,\n\t\t\t\"ingredients\": [\n\t\t\t],\n\t\t\t\"extras\": [\n\t\t\t]\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/venues/1/orders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"venues",
+								"1",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Active Order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/v1/venues/1/orders/9",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"venues",
+								"1",
+								"orders",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "payment types",
+			"item": [
+				{
+					"name": "Get Payment Types",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/payment_types",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payment_types"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "license",
+			"item": [
+				{
+					"name": "Link Device",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"venue_id\": 1,\n\t\"device_info\": \"Tablet android 9\",\n\t\"device_id\": \"adsvavadvadvavvda\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/radmins/link_device",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"radmins",
+								"link_device"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Sign In",
@@ -1623,61 +2276,55 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "c99d0454-f32a-4d62-ac06-4021fc1eaf7a",
+						"id": "c0628595-4700-46ef-ad2e-cc7b2bab0daa",
 						"exec": [
-							"// Estatus de la API\r",
-							"pm.test(\"Status code is 200\", function (){\r",
-							"   pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"\r",
-							"// La respuesta debe ser un Json\r",
-							"pm.test(\"Response should be JSON\", function (){\r",
-							"   pm.response.to.be.json;   \r",
-							"});\r",
-							"\r",
-							"\r",
-							"//Validar el tipo de contenido del contenido devuelto.\r",
-							"pm.test(\"Content-Type is present\", function () {\r",
-							"    pm.response.to.have.header(\"Content-Type\");\r",
-							"});\r",
-							"\r",
-							"\r",
-							"//Buscar Coincidencia en el cuerpo\r",
-							"tests[\"Body matches string\"] = responseBody.has(\"sebaspachon94@gmail.com\");\r",
-							"\r",
-							"\r",
-							"//Solicitud Headers\r",
-							"console.log(request);\r",
-							"console.log('request.method '+ request.method);\r",
-							"\r",
-							"var hostName = request.headers['host'];\r",
-							"console.log(hostName);\r",
-							"\r",
-							"//Respuesta Headers\r",
-							"console.log(responseHeaders)\r",
-							"console.log(responseTime);\r",
-							"console.log(responseBody);\r",
-							"console.log(responseCode);\r",
-							"\r",
-							"console.log(typeof responseHeaders);\r",
-							"console.log(typeof responseTime);\r",
-							"console.log(typeof responseBody);\r",
-							"console.log(typeof responseCode);\r",
-							"\r",
-							"postman.setEnvironmentVariable(\"access-token\", postman.getResponseHeader(\"access-token\"));\r",
-							"postman.setEnvironmentVariable(\"token-type\", postman.getResponseHeader(\"token-type\"));\r",
-							"postman.setEnvironmentVariable(\"client\", postman.getResponseHeader(\"client\"));\r",
-							"postman.setEnvironmentVariable(\"expiry\", postman.getResponseHeader(\"expiry\"));\r",
-							"postman.setEnvironmentVariable(\"uid\", postman.getResponseHeader(\"uid\"));\r",
-							"\r",
-							"\r",
-							"console.log(request);\r",
-							"console.log('request.method  '+request.method);\r",
-							"\r",
-							"\r",
-							"\r",
-							""
+							"",
+							"",
+							"// Estatus de la API",
+							"pm.test(\"Status code is 200\", function (){",
+							"   pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"// La respuesta debe ser un Json",
+							"pm.test(\"Response should be JSON\", function (){",
+							"   pm.response.to.be.json;   ",
+							"});",
+							"",
+							"",
+							"//Validar el tipo de contenido del contenido devuelto.",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"",
+							"//Buscar Coincidencia en el cuerpo",
+							"tests[\"Body matches string\"] = responseBody.has(\"sebaspachon94@gmail.com\");",
+							"",
+							"",
+							"//Solicitud Headers",
+							"console.log(request);",
+							"console.log('request.method '+ request.method);",
+							"",
+							"var hostName = request.headers['host'];",
+							"console.log(hostName);",
+							"",
+							"//Respuesta Headers",
+							"console.log(responseHeaders)",
+							"console.log(responseTime);",
+							"console.log(responseBody);",
+							"console.log(responseCode);",
+							"",
+							"console.log(typeof responseHeaders);",
+							"console.log(typeof responseTime);",
+							"console.log(typeof responseBody);",
+							"console.log(typeof responseCode);",
+							"",
+							"postman.setEnvironmentVariable(\"access-token\", postman.getResponseHeader(\"access-token\"));",
+							"postman.setEnvironmentVariable(\"token-type\", postman.getResponseHeader(\"token-type\"));",
+							"postman.setEnvironmentVariable(\"client\", postman.getResponseHeader(\"client\"));",
+							"postman.setEnvironmentVariable(\"expiry\", postman.getResponseHeader(\"expiry\"));",
+							"postman.setEnvironmentVariable(\"uid\", postman.getResponseHeader(\"uid\"));"
 						],
 						"type": "text/javascript"
 					}
@@ -1695,12 +2342,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"email\": \"sebaspachon94@gmail.com\",\n\t\"password\": \"A123123a\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\n\t\"email\": \"sebaspachon94@gmail.com\",\n\t\"password\": \"A123123a\",\n\t\"device_id\": \"adsvavadvadvavvda\"\n}"
 				},
 				"url": {
 					"raw": "{{base_url}}/api/v1/admin_auth/sign_in",
@@ -1731,12 +2373,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"email\": \"sebaspachon94@gmail.com\",\n\t\"password\": \"A123123a\",\n\t\"password_confirmation\": \"A123123a\",\n\t\"name\": \"Sebastian Pachon\",\n\t\"fiscal_number\": \"10012313\",\n\t\"phone\": \"321123123\",\n\t\"address\": \"calle 1\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\n\t\"email\": \"sebaspachon94@gmail.com\",\n\t\"password\": \"A123123a\",\n\t\"password_confirmation\": \"A123123a\",\n\t\"name\": \"Sebastian Pachon\",\n\t\"fiscal_number\": \"10012313\",\n\t\"phone\": \"321123123\",\n\t\"address\": \"calle 1\"\n}"
 				},
 				"url": {
 					"raw": "{{base_url}}/api/v1/admin_auth",
@@ -1753,7 +2390,7 @@
 			"response": []
 		},
 		{
-			"name": "Obtain Menu",
+			"name": "Get Menu",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1794,12 +2431,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": ""
 				},
 				"url": {
 					"raw": "{{base_url}}/api/v1/menu?venue_id=1",
@@ -1822,5 +2454,27 @@
 			"response": []
 		}
 	],
-	"protocolProfileBehavior": []
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ea3e1088-3fe9-4965-acde-ad2a28c587cc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "3638594b-e808-4578-a22e-55f27e5770f5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
 }
